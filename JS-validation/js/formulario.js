@@ -16,6 +16,7 @@ $(document).ready(function(){
 });
 
 //Previsualização de imagem, antes de enviar ao servidor
+//https://www.youtube.com/watch?v=BkcOqyq8W2M
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
@@ -34,6 +35,7 @@ $("#image-upload").change(function(){
 
 
 //Pesquisar CEP no site dos correios e preencher os locais
+//
 $(document).ready(function() {
   function limpa_formulário_cep() {
     // Limpa valores do formulário de cep.
@@ -58,10 +60,10 @@ $(document).ready(function() {
       //Valida o formato do CEP.
       if(validacep.test(cep)) {
         //Preenche os campos com "..." enquanto consulta webservice.
-        $("#rua").val("...");
-        $("#bairro").val("...");
-        $("#cidade").val("...");
-        $("#estado").val("...");
+        $("#rua").val("Pesquisando a Rua...");
+        $("#bairro").val("Pesquisando o seu Bairro...");
+        $("#cidade").val("Pesquisado a sua Cidade...");
+        $("#estado").val("Pesquisando o seu Estado...");
 
         //Consulta o webservice viacep.com.br/
         $.getJSON("//viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
