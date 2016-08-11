@@ -35,7 +35,7 @@ $("#image-upload").change(function(){
 
 
 //Pesquisar CEP no site dos correios e preencher os locais
-//
+//https://viacep.com.br/exemplo/jquery/
 $(document).ready(function() {
   function limpa_formulário_cep() {
     // Limpa valores do formulário de cep.
@@ -97,6 +97,7 @@ $(document).ready(function() {
 
 
 //Validar e-mail
+//https://jqueryvalidation.org/
 $(document).ready(function(){
   $("#criarPerfil").validate({
     rules: {
