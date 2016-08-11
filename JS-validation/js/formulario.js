@@ -1,3 +1,4 @@
+//Padronizar entradas
 $(document).ready(function(){
     $('#fixo').mask("(00) 0000-0000");
 });
@@ -14,22 +15,25 @@ $(document).ready(function(){
     $('#cep').mask("00.000-000");
 });
 
+//Previsualização de imagem, antes de enviar ao servidor
 function readURL(input) {
-  if (input.files && input.files) {
+  if (input.files && input.files[0]) {
     var reader = new FileReader();
     
     reader.onload = function (e) {
-      $('#image').attr('src', e.target.result);
+      $('#image-preview').attr('src', e.target.result);
       $('.btn-info').toggleClass('btn-info btn-warning');
     }
     reader.readAsDataURL(input.files[0]);
   }
 }
 
-$(".image_upload").change(function(){
+$("#image-upload").change(function(){
   readURL(this);
 });
 
+
+//Pesquisar CEP no site dos correios e preencher os locais
 $(document).ready(function() {
   function limpa_formulário_cep() {
     // Limpa valores do formulário de cep.
@@ -88,6 +92,9 @@ $(document).ready(function() {
   });
 });
 
+
+
+//Validar e-mail
 $(document).ready(function(){
   $("#criarPerfil").validate({
     rules: {
@@ -97,20 +104,5 @@ $(document).ready(function(){
         email: true
       },
     },
-  });
-});
-
-
-
-
-
-$(document).ready(function() {
-  $.uploadPreview({
-    input_field: "#image-upload",   // Default: .image-upload
-    preview_box: "#image-preview",  // Default: .image-preview
-    label_field: "#image-label",    // Default: .image-label
-    label_default: "Choose File",   // Default: Choose File
-    label_selected: "Change File",  // Default: Change File
-    no_label: false                 // Default: false
   });
 });
