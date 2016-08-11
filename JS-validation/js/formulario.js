@@ -107,3 +107,8 @@ $(document).ready(function(){
     },
   });
 });
+
+//Jquery para entrada de datas
+$(document).ready(function(){
+    $( "#datepicker" ).datepicker();
+});
