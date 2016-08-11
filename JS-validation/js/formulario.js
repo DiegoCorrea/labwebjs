@@ -28,11 +28,11 @@ function readURL(input) {
     reader.readAsDataURL(input.files[0]);
   }
 }
-
-$("#image-upload").change(function(){
-  readURL(this);
+$(document).ready(function(){
+  $("#image-upload").change(function(){
+    readURL(this);
+  });
 });
-
 
 //Pesquisar CEP no site dos correios e preencher os locais
 //https://viacep.com.br/exemplo/jquery/
@@ -93,8 +93,6 @@ $(document).ready(function() {
     }
   });
 });
-
-
 
 //Validar e-mail
 //https://jqueryvalidation.org/
