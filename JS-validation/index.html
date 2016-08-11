@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Criar Perfil LabWeb</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/jquery.uploadPreview.min.js"></script>
+  <script type="text/javascript" src="js/formulario.js"></script>
+
+</head>
+<body>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Criar Perfil</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <form name="criarPerfil" id="criarPerfil" novalidate>
+            <div class="row">
+              <div class="col-md-4">
+                <img id="image-preview" class="image_uploaded img-responsive img-centered" src="http://static.bitbahia.com.br/assets/avatar-c4a9963ad86c68649100b476add586667aaaf4672a3dbfd6abf0e7338f4f5337.jpg" alt="">
+                <input id="image-upload" class="btn btn-info btn-block image_upload" type="file">
+              </div>
+              <div class="col-md-8">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Nome</label>
+                    <input type="text" class="form-control" placeholder="Nome" id="name" required data-validation-required-message="Digite o seu nome" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Data de Nascimento</label>
+                    <input type="email" class="form-control" placeholder="Data de Nascimento" id="email" required data-validation-required-message="Digite sua data de nascimento" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Endereço de E-mail" id="email" required data-validation-required-message="Digite seu e-mail" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>CPF</label>
+                    <input type="cpf" class="form-control" placeholder="CPF" id="cpf">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>RG</label>
+                    <input type="rg" class="form-control" placeholder="Registro Geral" id="rg">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Telefone Fixo</label>
+                    <input type="fixo" class="form-control" placeholder="Telefone Fixo" id="fixo">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Telefone Celular</label>
+                    <input type="celular" class="form-control" placeholder="Telefone Celular" id="celular">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>CEP:</label>
+                    <input type="cep" class="form-control" placeholder="CEP" id="cep" size="10" maxlength="9">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Cidade:</label>
+                    <input type="cidade" class="form-control" placeholder="cidade" id="cidade" >
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Bairro:</label>
+                    <input type="bairro" class="form-control" placeholder="bairro" id="bairro" >
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Estado:</label>
+                    <input type="estado" class="form-control" placeholder="Estado" id="estado" size="10" maxlength="9">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Rua:</label>
+                  <input type="rua" class="form-control" placeholder="Rua" id="rua" size="10" maxlength="9">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-success btn-lg pull-right">Cadastrar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
