@@ -111,6 +111,7 @@ jQuery(function($){
     dateFormat: 'dd/mm/yy',
     firstDay: 0,
     isRTL: false,
+    changeMonth: true,
     changeYear: true,
     yearRange: '1950:2013',
     showMonthAfterYear: false,

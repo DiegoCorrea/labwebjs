@@ -16,7 +16,7 @@
   <!-- Css boostrap custom -->
   <link rel="stylesheet" type="text/css" href="css/layout.css">
 
-  <!-- Chamaremos 4 bibliotecas: -->
+  <!-- Chamaremos 3 bibliotecas: -->
   <!-- 1- Jquery -->
   <!-- 2- Jquery mask -->
   <!-- 3- Jquery UI Calendar -->
@@ -41,11 +41,12 @@
           <form name="criarPerfil" id="criarPerfil" method="get" action="confirma.html">
 
             <div class="row">
-
+            <!-- DIV da Imagem -->
               <div class="col-md-4">
+                <!-- Imagem -->
                 <img id="image-preview" class="img-responsive img-centered" src="img/standard-img.jpg" alt="" required>
                 
-
+                <!-- Botão de envio -->
                 <div class="fileUpload btn btn-info btn-block">
                   <span>Carregar imagem</span>
                   <input id="image-upload" class="upload" type="file" required>
@@ -56,6 +57,7 @@
                 <div class="row control-group">
                   <div class="form-group col-xs-12 floating-label-form-group controls">
                     <label>Nome</label>
+                    <!-- Input do nome id name, e é de preenchimento obrigatorio -->
                     <input type="text" class="form-control" placeholder="Nome" id="name" required>
                     <p class="help-block text-danger"></p>
                   </div>
@@ -63,6 +65,7 @@
                 <div class="row control-group">
                   <div class="form-group col-xs-12 floating-label-form-group controls">
                     <label>Data de Nascimento</label>
+                    <!-- Input da data de nascimento id datepicker, e é de preenchimento obrigatorio -->
                     <input type="text" class="form-control" placeholder="Data de Nascimento" id="datepicker" required>
                     <p class="help-block text-danger"></p>
                   </div>
