@@ -1,18 +1,18 @@
 //Padronizar entradas
 $(document).ready(function(){
-    $('#fixo').mask("(00) 0000-0000");
+  $('#fixo').mask("(00) 0000-0000");
 });
 
 $(document).ready(function(){
-    $('#celular').mask("(00) 0 0000-0000");
+  $('#celular').mask("(00) 0 0000-0000");
 });
 
 $(document).ready(function(){
-    $('#cpf').mask("000.000.000-00");
+  $('#cpf').mask("000.000.000-00");
 });
 
 $(document).ready(function(){
-    $('#cep').mask("00.000-000");
+  $('#cep').mask("00.000-000");
 });
 
 //Previsualização de imagem, antes de enviar ao servidor
@@ -24,6 +24,7 @@ function readURL(input) {
     reader.onload = function (e) {
       $('#image-preview').attr('src', e.target.result);
       $('.btn-info').toggleClass('btn-info btn-warning');
+      $('span').text('Trocar imagem');
     }
     reader.readAsDataURL(input.files[0]);
   }
@@ -36,8 +37,8 @@ $(document).ready(function(){
 
 //Pesquisar CEP no site dos correios e preencher os locais
 //https://viacep.com.br/exemplo/jquery/
-$(document).ready(function() {
-  function limpa_formulário_cep() {
+$(document).ready(function(){
+  function limpa_formulário_cep(){
     // Limpa valores do formulário de cep.
     $("#rua").val("");
     $("#bairro").val("");
@@ -66,7 +67,7 @@ $(document).ready(function() {
         $("#estado").val("Pesquisando o seu Estado...");
 
         //Consulta o webservice viacep.com.br/
-        $.getJSON("//viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
           if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
             $("#rua").val(dados.logradouro);
@@ -94,21 +95,16 @@ $(document).ready(function() {
   });
 });
 
-//Validar e-mail
-//https://jqueryvalidation.org/
-$(document).ready(function(){
-  $("#criarPerfil").validate({
-    rules: {
-      name: "required",
-      email: {
-        required: true,
-        email: true
-      },
-    },
-  });
-});
-
 //Jquery para entrada de datas
 $(document).ready(function(){
-    $( "#datepicker" ).datepicker();
+  $( "#datepicker" ).datepicker();
+});
+
+
+
+//Botão de 
+$(document).ready(function(){
+  $("#criarPerfil").submit(function(){
+    alert("Submssão realizada com sucesso!");
+  });
 });
