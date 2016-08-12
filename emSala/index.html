@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Criar Perfil LabWeb</title>
+
+  <!-- Chamando o Bootstrap e o css do jquery ui para o calendario -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+  <link href="css/jquery-ui.css" rel="stylesheet">
+
+  <!-- Css boostrap custom -->
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+  <!-- Chamaremos 3 bibliotecas: -->
+  <!-- 1- Jquery -->
+  <!-- 2- Jquery mask -->
+  <!-- 3- Jquery UI Calendar -->
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+
+  <!-- E então chamamos o nosso arquivo JS -->
+  <script type="text/javascript" src="js/formulario.js"></script>
+
+</head>
+<body>
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Criar Perfil</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <form name="criarPerfil" id="criarPerfil" method="get" action="confirma.html">
+
+            <div class="row">
+            <!-- DIV da Imagem -->
+              <div class="col-md-4">
+                <!-- Imagem -->
+                <img id="image-preview" class="img-responsive img-centered" src="img/standard-img.jpg" alt="" required>
+                
+                <!-- Botão de envio -->
+                <div class="fileUpload btn btn-info btn-block">
+                  <span>Carregar imagem</span>
+                  <input id="image-upload" class="upload" type="file" required>
+                </div>
+              </div>
+
+              <div class="col-md-8">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Nome</label>
+                    <!-- Input do nome id name, e é de preenchimento obrigatorio -->
+                    <input type="text" class="form-control" placeholder="Nome" id="name" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Data de Nascimento</label>
+                    <!-- Input da data de nascimento id datepicker, e é de preenchimento obrigatorio -->
+                    <input type="text" class="form-control" placeholder="Data de Nascimento" id="datepicker" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Endereço de E-mail" id="email" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>CPF</label>
+                    <input type="text" class="form-control" placeholder="CPF" id="cpf" required pattern=".{14,}">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>RG</label>
+                    <input type="text" class="form-control" placeholder="Registro Geral" id="rg"  required pattern="[0-9]+$" pattern=".{4,}">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Telefone Fixo</label>
+                    <input type="text" class="form-control" placeholder="Telefone Fixo" id="fixo" required pattern=".{13,}">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Telefone Celular</label>
+                    <input type="text" class="form-control" placeholder="Telefone Celular" id="celular" pattern=".{15,}">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>CEP:</label>
+                    <input type="text" class="form-control" placeholder="CEP" id="cep" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Cidade:</label>
+                    <input type="text" class="form-control" placeholder="cidade" id="cidade" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Bairro:</label>
+                    <input type="text" class="form-control" placeholder="bairro" id="bairro" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Estado:</label>
+                    <input type="text" class="form-control" placeholder="Estado" id="estado" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Rua:</label>
+                  <input type="text" class="form-control" placeholder="Rua" id="rua" required>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-2 control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Numero:</label>
+                  <input type="text" class="form-control" placeholder="Nº" id="numero" pattern="[0-9]+$" required>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-success btn-lg pull-right">Cadastrar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
