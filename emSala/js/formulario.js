@@ -1,53 +1,26 @@
-//Padronizar entradas
-$(document).ready(function(){
-  $('#fixo').mask("(00) 0000-0000");
-});
-
-$(document).ready(function(){
-  $('#celular').mask("(00) 0 0000-0000");
-});
-
-$(document).ready(function(){
-  $('#cpf').mask("000.000.000-00");
-});
-
-$(document).ready(function(){
-  $('#cep').mask("00.000-000");
-});
-
 //Previsualização de imagem, antes de enviar ao servidor
 //https://www.youtube.com/watch?v=BkcOqyq8W2M
-function readURL(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-    
-    reader.onload = function (e) {
-      $('#image-preview').attr('src', e.target.result);
-      $('.btn-info').toggleClass('btn-info btn-warning');
-      $('span').text('Trocar imagem');
-    }
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-$(document).ready(function(){
-  $("#image-upload").change(function(){
-    readURL(this);
-  });
-});
+
+
+
+//Padronizar entradas do MASK
+
+
 
 //Pesquisar CEP no site dos correios e preencher os locais
+//Completar com as id's perdidas
 //https://viacep.com.br/exemplo/jquery/
 $(document).ready(function(){
   function limpa_formulário_cep(){
     // Limpa valores do formulário de cep.
-    $("#rua").val("");
-    $("#bairro").val("");
-    $("#cidade").val("");
-    $("#estado").val("");
+    $("").val("");
+    $("").val("");
+    $("").val("");
+    $("").val("");
   }
   
   //Quando o campo cep perde o foco.
-  $("#cep").blur(function() {
+  $("").blur(function() {
 
     //Nova variável "cep" somente com dígitos.
     var cep = $(this).val().replace(/\D/g, '');
@@ -61,19 +34,19 @@ $(document).ready(function(){
       //Valida o formato do CEP.
       if(validacep.test(cep)) {
         //Preenche os campos com "..." enquanto consulta webservice.
-        $("#rua").val("Pesquisando a Rua...");
-        $("#bairro").val("Pesquisando o seu Bairro...");
-        $("#cidade").val("Pesquisado a sua Cidade...");
-        $("#estado").val("Pesquisando o seu Estado...");
+        $("").val("Pesquisando a Rua...");
+        $("").val("Pesquisando o seu Bairro...");
+        $("").val("Pesquisado a sua Cidade...");
+        $("").val("Pesquisando o seu Estado...");
 
         //Consulta o webservice viacep.com.br/
         $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
           if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
-            $("#rua").val(dados.logradouro);
-            $("#bairro").val(dados.bairro);
-            $("#cidade").val(dados.localidade);
-            $("#estado").val(dados.uf);
+            $("").val(dados.logradouro);
+            $("").val(dados.bairro);
+            $("").val(dados.localidade);
+            $("").val(dados.uf);
           } //end if.
           else {
             //CEP pesquisado não foi encontrado.
@@ -108,24 +81,19 @@ jQuery(function($){
     dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
     dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
     weekHeader: 'Sm',
-    dateFormat: 'dd/mm/yy',
     firstDay: 0,
     isRTL: false,
-    changeMonth: true,
-    changeYear: true,
-    yearRange: '1950:2013',
     showMonthAfterYear: false,
+    //Inserir codigo aqui
+
+
+
+
+
     yearSuffix: ''};
   $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
 });
 //Jquery para entrada de datas
-$(document).ready(function(){
-  $( "#datepicker" ).datepicker($.datepicker.regional["pt-BR"]);
-});
 
-//Botão de 
-$(document).ready(function(){
-  $("#criarPerfil").submit(function(){
-    alert("Submssão realizada com sucesso!");
-  });
-});
+
+//Botão de confirmação ao enviar
