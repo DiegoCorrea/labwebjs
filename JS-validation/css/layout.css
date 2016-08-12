@@ -286,3 +286,8 @@ fieldset[disabled] .btn-success.active {
   opacity: 0;
   filter: alpha(opacity=0);
 }
+
+.ui-widget-header {
+  color: black;
+  font-weight: bold;
+}
