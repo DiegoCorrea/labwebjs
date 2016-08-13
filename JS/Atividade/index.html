@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Criar Perfil LabWeb</title>
+
+  <!-- Chamando o Bootstrap e o css do jquery ui para o calendario -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+  <link href="css/jquery-ui.css" type="text/css" rel="stylesheet">
+
+  <!-- Css boostrap custom -->
+  <link rel="stylesheet" type="text/css" href="css/freelancer.css">
+
+  <!-- Chamaremos 3 bibliotecas: -->
+  <!-- 1- Jquery -->
+  <!-- 2- Jquery mask -->
+  <!-- 3- Jquery UI Calendar -->
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+
+  <!-- E então chamamos o nosso arquivo JS -->
+  <script type="text/javascript" src="js/formulario.js"></script>
+
+</head>
+<body>
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Dados do dependente</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <form name="criarPerfil" id="criarPerfil" method="post" action="confirma.html">
+
+            <div class="row">
+              <div class="row">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Nome</label>
+                    <!-- Input do nome id name, e é de preenchimento obrigatorio -->
+                    <input type="text" class="form-control" placeholder="Nome" id="name" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Data de Nascimento</label>
+                    <!-- Input da data de nascimento id datepicker, e é de preenchimento obrigatorio -->
+                    <input type="text" class="form-control" placeholder="Data de Nascimento" id="datepicker" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>CPF</label>
+                    <input type="text" class="form-control" placeholder="CPF" id="cpf" required pattern=".{14,}">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>RG</label>
+                    <input type="text" class="form-control" placeholder="Registro Geral" id="rg"  required pattern="[0-9]+$" pattern=".{4,}">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Telefone Fixo</label>
+                    <input type="text" class="form-control" placeholder="Telefone Fixo" id="fixo" required pattern=".{13,}">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Telefone Celular</label>
+                    <input type="text" class="form-control" placeholder="Telefone Celular" id="celular" pattern=".{15,}">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>CEP:</label>
+                    <input type="text" class="form-control" placeholder="CEP" id="cep" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Cidade:</label>
+                    <input type="text" class="form-control" placeholder="cidade" id="cidade" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Bairro:</label>
+                    <input type="text" class="form-control" placeholder="bairro" id="bairro" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Estado:</label>
+                    <input type="text" class="form-control" placeholder="Estado" id="estado" required>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Rua:</label>
+                  <input type="text" class="form-control" placeholder="Rua" id="rua" required>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-2 control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Numero:</label>
+                  <input type="text" class="form-control" placeholder="Nº" id="numero" pattern="[0-9]+$" required>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+             <fieldset>
+                <legend>Qual a dependencia?</legend>
+                <input type="checkbox" name="naturais" value="naturais" required/>Drogas Naturais <br />
+                <input type="checkbox" name="sintetica" value="sintetica" required/>Drogas Sintéticas<br />
+                <input type="checkbox" name="semi" value="semi" required/>Drogas Semi-Sintéticas<br />
+                <input type="checkbox" name="medicamentos" value="medicamentos" required/>Medicamentos<br />
+              </fieldset>
+            </div>
+
+            </br>
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2>Dados do Responsavel</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Nome Responsavel</label>
+                  <!-- Input do nome id name, e é de preenchimento obrigatorio -->
+                  <input type="text" class="form-control" placeholder="Nome" id="nameResponsavel" required>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <select class="col-md-2 text-center" required>
+                <option value="pai">Pai</option>
+                <option value="mae">Mãe</option>
+                <option value="irmao">Irmão</option>
+                <option value="filho">Filho</option>
+                <option value="amigo">Amigo</option>
+                <option value="parente">Parente</option>
+              </select>
+            </div>
+          <div class="row">
+            <div class="col-md-6 control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Telefone Fixo</label>
+                <input type="text" class="form-control" placeholder="Telefone do Responsavel" id="fixoResponsavel" required pattern=".{13,}">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+
+            <div class="col-md-6 control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Telefone Celular</label>
+                <input type="text" class="form-control" placeholder="Celular do Responsavel" id="celularResponsavel" pattern=".{15,}">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                      
+              <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>CEP:</label>
+                  <input type="text" class="form-control" placeholder="CEP" id="cepResponsavel" required>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Cidade:</label>
+                  <input type="text" class="form-control" placeholder="cidade" id="cidadeResponsavel" required>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Bairro:</label>
+                  <input type="text" class="form-control" placeholder="bairro" id="bairroResponsavel" required>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                  <label>Estado:</label>
+                  <input type="text" class="form-control" placeholder="Estado" id="estadoResponsavel" required>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-10 control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Rua:</label>
+                <input type="text" class="form-control" placeholder="Rua" id="ruaResponsavel" required>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-md-2 control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Numero:</label>
+                <input type="text" class="form-control" placeholder="Nº" id="numeroResponsavel" pattern="[0-9]+$" required>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+            <br>
+            <div id="success"></div>
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-success btn-lg pull-right">Cadastrar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
