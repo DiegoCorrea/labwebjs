@@ -16,6 +16,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('#cpf').mask("000.000.000-00");
 });
+
 $(document).ready(function(){
   $('#cpfResponsavel').mask("000.000.000-00");
 });
@@ -197,5 +198,37 @@ $(document).ready(function(){
 $(document).ready(function(){
   $("#criarPerfil").submit(function(){
     alert("Submssão realizada com sucesso!");
+  });
+});
+
+$(document).ready(function () {
+  $('.btn').click(function() {
+    checked = $("input[type=checkbox]:checked").length;
+
+    if(!checked) {
+      alert("Precisa indicar qual o tipo de dependencia!");
+      $('#combobox').focus();
+      return false;
+    }
+  });
+});
+//
+
+// Testando a validação usando jQuery
+$(function(){
+
+  // ## EXEMPLO 2
+  // Aciona a validação ao sair do input
+  $('#cpf').blur(function(){
+  
+    // O CPF ou CNPJ
+    var cpf_cnpj = $(this).val();
+    
+    // Testa a validação
+    if ( valida_cpf_cnpj( cpf_cnpj ) ) {
+      alert('CPF Valido');
+    } else {
+      alert('CPF ou CNPJ inválido!');
+    }
   });
 });
