@@ -3,6 +3,9 @@
 
 {% block content %}
 <table class="table table-bordered table-responsive">
+<div class="row">
+  <a href="{% url 'new'%}"><button class="pull-right glyphicon glyphicon-plus btn btn-success"></button></a>
+</div>
 <thead>
 <tr>
   <td>Id</td>
@@ -28,7 +31,7 @@
         {{ item.email }}</br>
       </td>
       <td>
-        
+        <a href="{% url 'delete' item.id %}" onclick="return confirm('Deseja Excluir?')"><button class="btn btn-danger">Deletar!</button></a>
       </td>
     </tr>
   {% endfor %}

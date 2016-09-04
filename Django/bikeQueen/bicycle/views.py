@@ -1,3 +1,5 @@
+from django.http import HttpResponseRedirect
+
 from django.shortcuts import render
 
 from .models import bicycle
@@ -10,9 +12,29 @@ def index(request):
   }
   return render(request, 'bicycle/index.html', context)
 
-def create(request):
-  return render(request,"bicycle/create.html")
+def new(request):
+  return render(request,"bicycle/new.html")
 
-def show(request,id):
-  Formulario.objects.get(pk=id)
-  return render(request,"bicycle/show.html")
+def delete(request, id):
+  bicycle.objects.get(pk=id).delete()
+  return HttpResponseRedirect('/bicycle')
+
+def create(request):
+  post = request.POST
+  id = post.get('id', '')
+  if id != '':
+    bike = bicycle.objects.get(pk=id)
+  else:
+   bike = bicycle()
+  bike.producer = post.get('producer', '')
+  bike.model = post.get('model', '')
+  bike.color = post.get('color', '')
+  bike.gear = post.get('gear', '')
+  bike.markExchange = post.get('markExchange', '')
+
+  bike.own = post.get('own', '')
+  bike.cellPhone = post.get('cellPhone', '')
+  bike.email = post.get('email', '')
+
+  bike.save()
+  return HttpResponseRedirect('/bicycle')
