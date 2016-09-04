@@ -13,7 +13,7 @@ def index(request):
   return render(request, 'bicycle/index.html', context)
 
 def new(request):
-  return render(request,"bicycle/new.html")
+  return render(request,'bicycle/new.html')
 
 def delete(request, id):
   bicycle.objects.get(pk=id).delete()
@@ -38,3 +38,11 @@ def create(request):
 
   bike.save()
   return HttpResponseRedirect('/bicycle')
+
+def editar(request, id):
+  bike = bicycle.objects.get(pk=id)
+  context = {
+    'bike': bike,
+    'id': id,
+  }
+  return render(request, 'bicycle/new.html', context=context)

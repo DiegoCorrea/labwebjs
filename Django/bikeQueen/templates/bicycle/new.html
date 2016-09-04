@@ -10,14 +10,14 @@
     <div class="control-group col-md-8">
       <div class="form-group col-xs-12 floating-label-form-group controls">
         <label>Fabricante</label>
-        <input type="text" class="form-control" placeholder="Fabricante" id="producer" value="{{ item.producer }}" required>
+        <input type="text" class="form-control" placeholder="Fabricante" id="producer" name="producer" value="{{ item.producer }}" required>
         <p class="help-block text-danger"></p>
       </div>
     </div>
     <div class="control-group col-md-4">
       <div class="form-group col-xs-12 floating-label-form-group controls">
         <label>Modelo</label>
-        <input type="text" class="form-control" placeholder="Modelo" id="model" value="{{ item.model }}" required>
+        <input type="text" class="form-control" placeholder="Modelo" id="model" value="{{ item.model }}" name="model" required>
         <p class="help-block text-danger"></p>
       </div>
     </div>
@@ -26,21 +26,21 @@
     <div class="control-group col-md-5">
       <div class="form-group col-xs-12 floating-label-form-group controls">
         <label>Cor</label>
-        <input type="text" class="form-control" placeholder="Cor" id="color" value="{{ item.color }}" required>
+        <input type="text" class="form-control" placeholder="Cor" id="color" value="{{ item.color }}" name="color" required>
         <p class="help-block text-danger"></p>
       </div>
     </div>
     <div class="control-group col-md-5">
       <div class="form-group col-xs-12 floating-label-form-group controls">
         <label>Marca da Marcha</label>
-        <input type="text" class="form-control" placeholder="Marca da Macha" id="makExchange" value="{{ item.makeExchange }}" required>
+        <input type="text" class="form-control" placeholder="Marca da Macha" id="makExchange" value="{{ item.makExchange }}" name="markExchange" required>
         <p class="help-block text-danger"></p>
       </div>
     </div>
     <div class="control-group col-md-2">
       <div class="form-group col-xs-12 floating-label-form-group controls">
         <label>Marchas</label>
-        <input type="text" class="form-control" placeholder="Machas" id="gear" value="{{ item.gear }}" required>
+        <input type="text" class="form-control" placeholder="Machas" id="gear" value="{{ item.gear }}" name="gear" required>
         <p class="help-block text-danger"></p>
       </div>
     </div>
@@ -50,26 +50,24 @@
   <div class="row control-group">
     <div class="form-group col-xs-12 floating-label-form-group controls">
       <label>Proprietario</label>
-      <input type="text" class="form-control" placeholder="proprietario" id="own" value="{{ item.own }}" required>
+      <input type="text" class="form-control" placeholder="proprietario" id="own" value="{{ item.own }}" name="own" required>
       <p class="help-block text-danger"></p>
     </div>
   </div>
   <div class="control-group col-md-6">
     <div class="form-group col-xs-12 floating-label-form-group controls">
       <label>Celular</label>
-      <!-- Input da data de nascimento id datepicker, e é de preenchimento obrigatorio -->
-      <input type="text" class="form-control" placeholder="Celular" id="cellPhone" value="{{ item.cellPhone }}" required>
+      <input type="text" class="form-control" placeholder="Celular" id="cellPhone" value="{{ item.cellPhone }}" name="cellPhone" required>
       <p class="help-block text-danger"></p>
     </div>
   </div>
   <div class="control-group col-md-6">
     <div class="form-group col-xs-12 floating-label-form-group controls">
       <label>E-mail</label>
-      <!-- Input da data de nascimento id datepicker, e é de preenchimento obrigatorio -->
-      <input type="text" class="form-control" placeholder="E-mail" id="email" value="{{ item.email }}" required>
+      <input type="text" class="form-control" placeholder="E-mail" id="email" value="{{ item.email }}" name="email" required>
       <p class="help-block text-danger"></p>
     </div>
   </div>
-  <button type="submit" class="btn btn-success">Salvar!</button>
+  <button type="submit" class="btn btn-success pull-right">Salvar</button>
 </form>
 {% endblock %}
