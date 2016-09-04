@@ -31,7 +31,8 @@
         {{ item.email }}</br>
       </td>
       <td>
-        <a href="{% url 'delete' item.id %}" onclick="return confirm('Deseja Excluir?')"><button class="btn btn-danger">Deletar!</button></a>
+        <a href="{% url 'edit' item.id %}" ><button class="btn btn-warning">Editar</button></a>
+        <a href="{% url 'delete' item.id %}" onclick="return confirm('Deseja Excluir?')"><button class="btn btn-danger">Deletar</button></a>
       </td>
     </tr>
   {% endfor %}

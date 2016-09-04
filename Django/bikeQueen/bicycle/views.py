@@ -1,7 +1,5 @@
 from django.http import HttpResponseRedirect
-
 from django.shortcuts import render
-
 from .models import bicycle
 
 # Create your views here.
@@ -39,7 +37,7 @@ def create(request):
   bike.save()
   return HttpResponseRedirect('/bicycle')
 
-def editar(request, id):
+def edit(request, id):
   bike = bicycle.objects.get(pk=id)
   context = {
     'bike': bike,
