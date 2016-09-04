@@ -44,3 +44,11 @@ def edit(request, id):
     'id': id,
   }
   return render(request, 'bicycle/new.html', context=context)
+
+def show(request, id):
+  bike = bicycle.objects.get(pk=id)
+  context = {
+    'bike': bike,
+    'id': id,
+  }
+  return render(request, 'bicycle/show.html', context=context)

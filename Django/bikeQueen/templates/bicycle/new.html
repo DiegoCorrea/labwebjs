@@ -47,27 +47,30 @@
   </div>
 
   <h2 class="text-center">Pertence a:</h2>
-  <div class="row control-group">
+  <div class="control-group">
     <div class="form-group col-xs-12 floating-label-form-group controls">
       <label>Proprietario</label>
       <input type="text" class="form-control" placeholder="proprietario" id="own" value="{{ bike.own }}" name="own" required>
       <p class="help-block text-danger"></p>
     </div>
   </div>
-  <div class="control-group col-md-6">
-    <div class="form-group col-xs-12 floating-label-form-group controls">
-      <label>Celular</label>
-      <input type="text" class="form-control" placeholder="Celular" id="cellPhone" value="{{ bike.cellPhone }}" name="cellPhone" required>
-      <p class="help-block text-danger"></p>
+  <div class="row">
+    <div class="control-group col-md-6">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+        <label>Celular</label>
+        <input type="text" class="form-control" placeholder="Celular" id="cellPhone" value="{{ bike.cellPhone }}" name="cellPhone" required>
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+    <div class="control-group col-md-6">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+        <label>E-mail</label>
+        <input type="email" class="form-control" placeholder="E-mail" id="email" value="{{ bike.email }}" name="email">
+        <p class="help-block text-danger"></p>
+      </div>
     </div>
   </div>
-  <div class="control-group col-md-6">
-    <div class="form-group col-xs-12 floating-label-form-group controls">
-      <label>E-mail</label>
-      <input type="text" class="form-control" placeholder="E-mail" id="email" value="{{ bike.email }}" name="email" required>
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
+  </br>
   <button type="submit" class="btn btn-success pull-right">Salvar</button>
 </form>
 {% endblock %}

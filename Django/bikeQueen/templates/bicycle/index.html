@@ -7,16 +7,14 @@
 <table class="table table-bordered table-responsive">
   <thead>
     <tr>
-      <td>Id</td>
-      <td>Bicicleta</td>
-      <td>Dono</td>
-      <td><a href="{% url 'new'%}"><button class="pull-right glyphicon glyphicon-plus btn btn-success"></button></a></td>
+      <td><strong>Bicicleta</strong></td>
+      <td><strong>Dono</strong></td>
+      <td><a href="{% url 'new'%}"><button class="glyphicon glyphicon-plus btn btn-success"></button></a></td>
     </tr>
   </thead>
   <tbody>
     {% for item in itens %}
       <tr>
-        <td class="col-md-1">{{ item.id }}</td>
         <td  class="col-md-6">
           <label>Fabricante:  </label> {{ item.producer }}</br>
           <label>Modelo: </label> {{ item.model }}</br>
@@ -24,12 +22,14 @@
           <label>Marcha: </label> {{ item.gear }}</br>
           <label>Marca da Macha: </label> {{ item.markExchange }}</br>
         </td>
-        <td class="col-md-4">
+        <td class="col-md-5">
           <label>Proprietario: </label> {{ item.own }}</br>
           <label>Celular: </label> {{ item.cellPhone }}</br>
           <label>E-mail: </label> {{ item.email }}</br>
         </td>
         <td class="col-md-1">
+          <a href="{% url 'show' item.id %}"><button class="btn btn-info glyphicon glyphicon-eye-open"></button></a>
+
           <a href="{% url 'edit' item.id %}" ><button class="btn btn-warning glyphicon glyphicon-pencil"></button></a>
           </br>
 

@@ -6,6 +6,7 @@ urlpatterns = [
   url(r'^$', views.index, name='index'),
   url(r'^new/', views.new, name='new'),
   url(r'^create', views.create, name='create'),
+  url(r'^show/([0-9]*)/$', views.show, name='show'),
   url(r'^edit/([0-9]*)/$', views.edit, name='edit'),
   url(r'^delete/([0-9]*)/', views.delete, name='delete'),
 ]
