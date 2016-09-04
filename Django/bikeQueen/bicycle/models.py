@@ -1,14 +1,17 @@
 from django.db import models
+from django.forms import ModelForm
+
 
 # Create your models here.
 class bicycle(models.Model):
-	fabricante = models.CharField(max_length=255)
-	modelo = models.CharField(max_length=255)
-	cor = models.CharField(max_length=255)
-	marcha = models.CharField(max_length=255)
-	marcaCambio = models.CharField(max_length=255)
-	proprietario = models.CharField(max_length=255)
-	celular = models.CharField(max_length=255)
+	producer = models.CharField(max_length=255)
+	model = models.CharField(max_length=255)
+	color = models.CharField(max_length=255)
+	gear = models.CharField(max_length=255)
+	markExchange = models.CharField(max_length=255)
+
+	own = models.CharField(max_length=255)
+	cellPhone = models.CharField(max_length=255)
 	email = models.CharField(max_length=255)
 
 #class bicycleForm(ModelForm):

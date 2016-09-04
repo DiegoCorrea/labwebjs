@@ -1,0 +1,38 @@
+{% extends 'bicycle/layout.html' %}
+{% block title %}Create bicycle{% endblock %}
+
+{% block content %}
+<table class="table table-bordered table-responsive">
+<thead>
+<tr>
+  <td>Id</td>
+  <td>Bicicleta</td>
+  <td>Dono</td>
+  <td>Opções</td>
+</tr>
+</thead>
+<tbody>
+  {% for item in itens %}
+    <tr>
+      <td>{{ item.id }}</td>
+      <td>
+        {{ item.producer }}</br>
+        {{ item.model }}</br>
+        {{ item.color }}</br>
+        {{ item.gear }}</br>
+        {{ item.markExchange }}</br>
+      </td>
+      <td>
+        {{ item.own }}</br>
+        {{ item.cellPhone }}</br>
+        {{ item.email }}</br>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+  {% endfor %}
+</tbody>
+</table>
+
+{% endblock %}
