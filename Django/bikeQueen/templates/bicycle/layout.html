@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <html>
   <head>
     <title>Bicycle Manager</title>
@@ -11,6 +11,8 @@
 
     {# Display django.contrib.messages as Bootstrap alerts #}
     {% bootstrap_messages %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'bicycle/font-awesome-4.6.3/css/font-awesome.min.css' %}" />
   </head>
   <body>
     <div class="content container">
