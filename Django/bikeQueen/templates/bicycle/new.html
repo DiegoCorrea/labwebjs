@@ -33,19 +33,19 @@
     <div class="control-group col-md-5">
       <div class="form-group col-xs-12 floating-label-form-group controls">
         <label>Marca da Marcha</label>
-        <input type="text" class="form-control" placeholder="Marca da Macha" id="markExchange" value="{{ bike.markExchange }}" name="markExchange" required>
+        <input type="text" class="form-control" placeholder="Marca da Macha" id="markExchange" value="{{ bike.markExchange }}" name="markExchange">
         <p class="help-block text-danger"></p>
       </div>
     </div>
     <div class="control-group col-md-2">
       <div class="form-group col-xs-12 floating-label-form-group controls">
         <label>Marchas</label>
-        <input type="text" class="form-control" placeholder="Machas" id="gear" value="{{ bike.gear }}" name="gear" required>
+        <input type="text" class="form-control" placeholder="Machas" id="gear" value="{{ bike.gear }}" name="gear">
         <p class="help-block text-danger"></p>
       </div>
     </div>
   </div>
-
+  </br>
   <h2 class="text-center">Pertence a:</h2>
   <div class="control-group">
     <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -58,7 +58,7 @@
     <div class="control-group col-md-6">
       <div class="form-group col-xs-12 floating-label-form-group controls">
         <label>Celular</label>
-        <input type="text" class="form-control" placeholder="Celular" id="cellPhone" value="{{ bike.cellPhone }}" name="cellPhone" required>
+        <input type="text" class="form-control" placeholder="Celular" id="cellPhone" value="{{ bike.cellPhone }}" name="cellPhone" pattern=".{15,}" required>
         <p class="help-block text-danger"></p>
       </div>
     </div>
