@@ -25,7 +25,7 @@ def create(request):
   if id != '':
     bike = bicycle.objects.get(pk=id)
   else:
-   bike = bicycle()
+    bike = bicycle()
   bike.producer = post.get('producer', '')
   bike.model = post.get('model', '')
   bike.color = post.get('color', '')

@@ -14,7 +14,7 @@ class bicycle(models.Model):
 	cellPhone = models.CharField(max_length=255)
 	email = models.CharField(max_length=255)
 
-class create(ModelForm):
+class bicycleForm(ModelForm):
     class Meta:
         model = bicycle
         fields = ['producer','model','color', 'gear', 'markExchange', 'own', 'cellPhone', 'email']
