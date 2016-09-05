@@ -1,0 +1,5 @@
+# Após executar
+python manage.py runserver
+
+# Abra o link
+http://127.0.0.1:8000/bicycle/

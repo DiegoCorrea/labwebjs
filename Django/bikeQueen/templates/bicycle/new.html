@@ -37,12 +37,15 @@
         <p class="help-block text-danger"></p>
       </div>
     </div>
-    <div class="control-group col-md-2">
-      <div class="form-group col-xs-12 floating-label-form-group controls">
-        <label>Marchas</label>
-        <input type="text" class="form-control" placeholder="Machas" id="gear" value="{{ bike.gear }}" name="gear">
-        <p class="help-block text-danger"></p>
-      </div>
+    <div class="col-md-2">
+      </br>
+      <small>Possui Marcha?</small>
+      <select id="gear" class="form-control input-sm" name="gear">
+        <option value=""></option>
+        <option class="hidden" value="{{ bike.gear }}" selected>{{ bike.gear}} </option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
     </div>
   </div>
   </br>
