@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cpf: MyString
+  cellPhone: MyString
+  borned: MyString
+  office: MyString
+  security: MyString
+
+two:
+  name: MyString
+  cpf: MyString
+  cellPhone: MyString
+  borned: MyString
+  office: MyString
+  security: MyString
