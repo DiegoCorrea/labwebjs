@@ -9,7 +9,7 @@
       <th><strong>Data de Nascimento</strong></th>
       <th><strong>Tipo</strong></th>
       <th><strong>Segurança</strong></th>
-      <th><%= link_to peoples_new_path do %><span class="glyphicons glyphicons-plus btn btn-success"></span><% end %></th>
+      <th><%= link_to new_people_path do %><span class="glyphicons glyphicons-plus btn btn-success"></span><% end %></th>
     </tr>
   </thead>
   <tbody>
@@ -21,7 +21,10 @@
         <td><%= f.borned %></td>
         <td><%= f.office %></td>
         <td><%= f.security %></td>
-        <td><%= link_to peoples_edit_path do %><div class="glyphicons glyphicons-remove btn btn-warning"></div><% end %></td>
+        <td>
+          <%= link_to edit_people_path(f) do %><div class="glyphicons glyphicons-pen btn btn-warning"></div><% end %>
+          <%= link_to people_path(f), :method => :delete, data: {confirm: "Tem certeza que deseja deletar?"} do %> <div class="glyphicons glyphicons-remove btn btn-danger"></div><% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
