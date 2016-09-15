@@ -1,7 +1,7 @@
 <div class="row">
   <h3 class="text-md-center">Editando VIP</h3>
 </div>
-<%= form_for :people, controller: 'people', action: "update" do |f| %>
+<%= form_for :people, action: "update", :method => :POST do |f| %>
   <div id="container-fluid" class="row">
     <div class="row">
       <div class="control-group">

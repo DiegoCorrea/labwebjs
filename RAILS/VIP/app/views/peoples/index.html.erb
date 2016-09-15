@@ -9,7 +9,7 @@
       <th><strong>Data de Nascimento</strong></th>
       <th><strong>Tipo</strong></th>
       <th><strong>Segurança</strong></th>
-      <th><%= link_to new_people_path do %><span class="glyphicons glyphicons-plus btn btn-success"></span><% end %></th>
+      <th class="text-md-center"><%= link_to new_people_path do %><span class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></span><% end %></th>
     </tr>
   </thead>
   <tbody>
@@ -22,8 +22,9 @@
         <td><%= f.office %></td>
         <td><%= f.security %></td>
         <td>
-          <%= link_to edit_people_path(f) do %><div class="glyphicons glyphicons-pen btn btn-warning"></div><% end %>
-          <%= link_to people_path(f), :method => :delete, data: {confirm: "Tem certeza que deseja deletar?"} do %> <div class="glyphicons glyphicons-remove btn btn-danger"></div><% end %>
+          <%= link_to edit_people_path(f) do %><div class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+</div><% end %>
+          <%= link_to people_path(f), :method => :delete, data: {confirm: "Tem certeza que deseja deletar?"} do %> <div class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></div><% end %>
         </td>
       </tr>
     <% end %>
