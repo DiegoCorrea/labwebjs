@@ -53,9 +53,14 @@
         <% end %>
       </div>
       <div class="col-md-6">
-        <% @security.each do |key, a_value| %>
-          <%= f.check_box(:security, { }, a_value, nil) %><%= key %>
-        <% end %>
+        <%= check_box_tag  'people[security][]', 'Combio', checked('Combio'), id: 'security_combio' %>
+        <%= label_tag 'people_combio', 'Combio' %>
+        <%= check_box_tag  'people[security][]', 'Batedor', checked('Batedor'), id: 'security_batedor' %>
+        <%= label_tag 'people_combio', 'Batedor' %>
+        <%= check_box_tag  'people[security][]', 'F.E.', checked('F.E.'), id: 'security_fe' %>
+        <%= label_tag 'people_combio', 'F.E.' %>
+        <%= check_box_tag  'people[security][]', 'Aproximada', checked('Aproximada'), id: 'security_aproximada' %>
+        <%= label_tag 'people_combio', 'Aproximada' %>
       </div>
     </div>
     <div id="row">
