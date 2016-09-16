@@ -32,5 +32,8 @@ jQuery(function($){
 });
 //Jquery para entrada de datas
 $(document).ready(function(){
-  $( "#borned" ).datepicker($.datepicker.regional["pt-BR"]);
+  $( ".borned" ).datepicker($.datepicker.regional["pt-BR"]);
 });
+$( document ).on('turbolinks:change', function() {
+  console.log("It works on each visit!")
+})

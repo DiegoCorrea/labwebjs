@@ -33,7 +33,7 @@
         <div class="col-md-4">
           <div class="control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
-              <%= f.text_field :borned , :type => 'text' , :class => 'form-control' , :placeholder => 'Data de Nascimento' , :id => 'borned' , :required => true %>
+              <%= f.text_field :borned , :type => 'text' , :class => 'form-control borned' , :placeholder => 'Data de Nascimento' , :id => 'borned' , :required => true %>
               <p class="help-block text-danger"></p>
             </div>
           </div>    
@@ -41,10 +41,14 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          
+          <% @office.each do |value| %>
+            <%= f.radio_button :office, value, :required => true%><%= value %>
+          <% end %>
         </div>
         <div class="col-md-6">
-          
+          <% @security.each do |key, a_value| %>
+            <%= f.check_box(:security, { :multiple => true }, a_value) %><%= key %>
+          <% end %>
         </div>
       </div>
       <div id="row">

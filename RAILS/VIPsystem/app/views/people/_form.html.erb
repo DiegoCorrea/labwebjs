@@ -1,0 +1,67 @@
+<%= form_for :people do |f| %>
+  <% if @people.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@people.errors.count, "error") %> prohibited this people from being saved:</h2>
+
+      <ul>
+      <% @people.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="container-fluid" class="row form-bottom">
+    <div class="row">
+      <div class="control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+          <%= f.text_field :name , :type => 'text' , :class => 'form-control' , :placeholder => 'Nome' , :id => 'name' , :required => true %>
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <%= f.text_field :cpf , :type => 'text' , :class => 'form-control' , :placeholder => 'CPF' , :id => 'CPF' , :required => true %>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <%= f.text_field :cellPhone , :type => 'text' , :class => 'form-control' , :placeholder => 'Celular' , :id => 'cellPhone' , :required => true %>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <%= f.text_field :borned , :type => 'text' , :class => 'form-control borned' , :placeholder => 'Data de Nascimento' , :id => 'borned' , :required => true %>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>    
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <% @office.each do |value| %>
+          <%= f.radio_button :office, value, :required => true%><%= value %>
+        <% end %>
+      </div>
+      <div class="col-md-6">
+        <% @security.each do |key, a_value| %>
+          <%= f.check_box(:security, { :multiple => true }, a_value) %><%= key %>
+        <% end %>
+      </div>
+    </div>
+    <div id="row">
+      <div id="success"></div>
+        <%= f.submit "Adicionar", :type => "submit" , :class => "btn btn-success btn-lg"%>
+      </div>
+    </div>
+  </div>
+<% end %>

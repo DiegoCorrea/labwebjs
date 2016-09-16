@@ -5,6 +5,8 @@ class PeoplesController < ApplicationController
 
   def new
     @people = People.new
+    @office = office_atr
+    @security = security_atr
   end
 
   def create
@@ -22,6 +24,8 @@ class PeoplesController < ApplicationController
 
   def edit
     @people = set_people
+    @office = office_atr
+    @security = security_atr
   end
 
   def update
@@ -57,5 +61,13 @@ class PeoplesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def people_params
       params.require(:people).permit(:name, :cpf, :cellPhone, :borned, :office, :security)
-    end  
+    end
+
+    def office_atr
+      ["Governador","Presidente","General", "Outros"]
+    end
+
+    def security_atr
+      {"Aproximada" => 1, "Combio" => 2, "Batedor" => 3, "Helicóptero" => 4, "F.E." => 5}
+    end
 end

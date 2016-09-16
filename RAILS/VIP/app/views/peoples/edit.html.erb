@@ -1,55 +1,63 @@
-<div class="row">
-  <h3 class="text-md-center">Editando VIP</h3>
+</br>
+<div class="row "> 
+  <div class="row form-top">
+    <h3 class="text-md-center">Novo VIP</h3>
+  </div>
+  <%= form_for :people, action: "update", :method => :POST do |f| %>
+    <div id="container-fluid" class="row form-bottom">
+      <div class="row">
+        <div class="control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <%= f.text_field :name , :type => 'text' , :class => 'form-control' , :placeholder => 'Nome' , :id => 'name' , :required => true %>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <%= f.text_field :cpf , :type => 'text' , :class => 'form-control' , :placeholder => 'CPF' , :id => 'CPF' , :required => true %>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <%= f.text_field :cellPhone , :type => 'text' , :class => 'form-control' , :placeholder => 'Celular' , :id => 'cellPhone' , :required => true %>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <%= f.text_field :borned , :type => 'text' , :class => 'form-control borned' , :placeholder => 'Data de Nascimento' , :id => 'borned' , :required => true %>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>    
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <% @office.each do |value| %>
+            <div class='col-md-4'>
+              <%= f.radio_button :office, value, :required => true %><%= value %>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-6">
+          <% @security.each do |a_value| %>
+            <%= f.check_box(:security, { :multiple => true }, a_value) %><%= a_value%>
+          <% end %>
+        </div>
+      </div>
+      <div id="row">
+        <div id="success"></div>
+          <%= f.submit "Adicionar", :type => "submit" , :class => "btn btn-success btn-lg"%>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
-<%= form_for :people, action: "update", :method => :POST do |f| %>
-  <div id="container-fluid" class="row">
-    <div class="row">
-      <div class="control-group">
-        <div class="form-group col-xs-12 floating-label-form-group controls">
-          <%= f.text_field :name , :type => 'text' , :class => 'form-control' , :placeholder => 'Nome' , :id => 'name' , :required => true %>
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="control-group">
-          <div class="form-group col-xs-12 floating-label-form-group controls">
-            <%= f.text_field :cpf , :type => 'text' , :class => 'form-control' , :placeholder => 'CPF' , :id => 'CPF' , :required => true %>
-            <p class="help-block text-danger"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="control-group">
-          <div class="form-group col-xs-12 floating-label-form-group controls">
-            <%= f.text_field :cellPhone , :type => 'text' , :class => 'form-control' , :placeholder => 'Celular' , :id => 'CellPhone' , :required => true %>
-            <p class="help-block text-danger"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="control-group">
-          <div class="form-group col-xs-12 floating-label-form-group controls">
-            <%= f.text_field :borned , :type => 'text' , :class => 'form-control' , :placeholder => 'Data de Nascimento' , :id => 'bornerd' , :required => true %>
-            <p class="help-block text-danger"></p>
-          </div>
-        </div>    
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        
-      </div>
-      <div class="col-md-6">
-        
-      </div>
-    </div>
-  </div>
-  <div id="row">
-    <div id="success"></div>
-    <div class="form-group col-xs-12 text-right">
-      <%= f.submit "Salvar Edição", :type => "submit" , :class => "btn btn-success btn-lg" %>
-    </div>
-  </div>
-<% end %>
