@@ -32,13 +32,11 @@ jQuery(function($){
 });
 //Jquery para entrada de datas
 $(document).ready(function(){
-  $( ".borned" ).datepicker($.datepicker.regional["pt-BR"]);
+  $(".borned").datepicker($.datepicker.regional["pt-BR"]);
 });
 
-$(function(){
+$(document).ready(function(){
 
-  // ## EXEMPLO 2
-  // Aciona a validação ao sair do input
   $('#CPF').blur(function(){
   
     // O CPF ou CNPJ

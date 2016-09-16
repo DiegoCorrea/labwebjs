@@ -24,7 +24,7 @@
       <div class="col-md-4">
         <div class="control-group">
           <div class="form-group col-xs-12 floating-label-form-group controls">
-            <%= f.text_field :cpf , :type => 'text' , :class => 'form-control' , :placeholder => 'CPF' , :id => 'CPF' , :required => true %>
+            <%= f.text_field :cpf , :type => 'text' , :class => 'form-control' , :placeholder => 'CPF' , :id => 'CPF', pattern: ".{14,}" , :required => true %>
             <p class="help-block text-danger"></p>
           </div>
         </div>
@@ -32,7 +32,7 @@
       <div class="col-md-4">
         <div class="control-group">
           <div class="form-group col-xs-12 floating-label-form-group controls">
-            <%= f.text_field :cellPhone , :type => 'text' , :class => 'form-control' , :placeholder => 'Celular' , :id => 'cellPhone' , :required => true %>
+            <%= f.text_field :cellPhone , :type => 'text' , :class => 'form-control' , :placeholder => 'Celular' , :id => 'cellPhone', pattern: ".{15,}" , :required => true %>
             <p class="help-block text-danger"></p>
           </div>
         </div>
@@ -40,7 +40,7 @@
       <div class="col-md-4">
         <div class="control-group">
           <div class="form-group col-xs-12 floating-label-form-group controls">
-            <%= f.text_field :borned , :type => 'text' , :class => 'form-control borned' , :placeholder => 'Data de Nascimento' , :id => 'borned' , :required => true %>
+            <%= f.text_field :borned , :type => 'text' , :class => 'form-control borned' , :placeholder => 'Data de Nascimento' , :id => 'borned', pattern: ".{10,}" , :required => true %>
             <p class="help-block text-danger"></p>
           </div>
         </div>    
@@ -54,7 +54,7 @@
       </div>
       <div class="col-md-6">
         <% @security.each do |key, a_value| %>
-          <%= f.check_box(:security, { :multiple => true }, a_value) %><%= key %>
+          <%= f.check_box(:security, { }, a_value, nil) %><%= key %>
         <% end %>
       </div>
     </div>
